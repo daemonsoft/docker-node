@@ -16,4 +16,6 @@ apt-get update && apt-get install -y docker-ce git
 
 cd /home/ && git clone https://github.com/daemonsoft/docker-node.git && cd docker-node
 
-docker build .
+docker build . -t daemonsoft/node-tarea1
+
+docker run -n node-tarea1 -p 80:3000 -d daemonsoft/node-tarea1
