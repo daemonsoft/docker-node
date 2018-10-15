@@ -5,4 +5,4 @@ RUN apk add --no-cache tini
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install && npm cache clean --force
-ENTRYPOINT [ "/sbin/tini node ./bin/www" ]
+ENTRYPOINT [ "/sbin/tini -- node ./bin/www" ]
